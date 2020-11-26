@@ -24,6 +24,4 @@ Questa è la documentazione dell'Ω frontend
 
 ### @Changelog
 
-- Aggiunta `Parrot` API
-- Aggiunto EchoService
-- Aggiunta `Secret` API
+- Creato il progetto!!!
