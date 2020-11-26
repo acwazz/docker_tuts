@@ -37,7 +37,7 @@ sudo chown -R root:docker /var/run/docker
 
 #### MacOS
 
-Seguire la guida ufficiale per l'installazione di docker desktop
+Seguire la guida ufficiale per l'installazione di Docker Desktop
 
 - https://docs.docker.com/docker-for-mac/install/
 
