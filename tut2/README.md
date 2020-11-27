@@ -10,6 +10,7 @@ Questa è la documentazione dell'Ω backend
 - `Express.js` - Libreria backend
 - `dotenv` - gestione delle variabili d'ambiente
 - `morgan` - Express middleware per il logging delle chiamate
+- `cors` - CORS Headers
 
 
 

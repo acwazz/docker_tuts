@@ -1,38 +1,94 @@
 .App {
   text-align: center;
+  font-family: monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+    height: 100vh;
+    width:100%;
+    position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-container {
+    width: 200px;
+    background: burlywood;
+    height: 90px;
+    border: 2px solid floralwhite;
+    border-radius: 20px;
+    padding: 20px 0;
+    margin: 40vh auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input.form-container__input {
+    border-radius: 11px;
+    border: 1px solid darkgray;
+    height: 30px;
+    width: 160px;
+    font-size: 16px;
+    padding: 0 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container__submit {
+    background: teal;
+    color: antiquewhite;
+    font-size: 16px;
+    font-weight: 900;
+    width: 100px;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 6px;
+    transition: 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-container__submit:hover {
+    background: orange;
+    color: black;
+    cursor: pointer;
+}
+
+@keyframes MoveUpDown {
+    0% { top: -1000px; }
+    100% { top: 20px; }
+}
+
+.toast-response {
+    margin: 10px auto;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 120px);
+    width: 200px;
+    background: chocolate;
+    min-height: 50px;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 700;
+    transition: 0.5s;
+    animation: MoveUpDown 0.5s linear;
+    animation-direction: alternate;
+}
+
+.toast-response__content {
+    overflow-wrap: anywhere;
+}
+
+.toast-response__close {
+    position: absolute;
+    right: 9px;
+    top: 5px;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0;
+}
+
+.toast-response__close:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.toast-response__title {
+    margin: -7px 5px 10px;
+    color: antiquewhite;
 }

@@ -1,6 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
+const cors = require('cors')
 
 
 /** ENV VARS */
@@ -60,6 +61,7 @@ function checkAuth(req, res, next) {
 function startServer(host, port, routes = []) {
     const app = express()
     app.use(morgan('dev'))
+    app.use(cors())
     app.use(express.json())
     app.use(express.urlencoded({ extended: true }))
     app.use(checkAuth)
