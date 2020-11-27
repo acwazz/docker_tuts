@@ -9,15 +9,16 @@ Questa è la documentazione dell'Ω backend
 - `Node.js` ver > 14 - Runtime
 - `Express.js` - Libreria backend
 - `dotenv` - gestione delle variabili d'ambiente
+- `morgan` - Express middleware per il logging delle chiamate
 
 
 
 ### Env Vars :blue_book:
 
 - `BE_HOST` - Host in ascolto dell'applicazione - *default*: `127.0.0.1`
-
 - `BE_PORT` - Porta in ascolto dell'applicazione - *default*: `2611`
 - `SECRET_MSG` - Messaggio segreto da consegnare a Indiana Jones :cowboy_hat_face: - *default*: `nope_no_msg`
+- `REACT_APP_DEFAULT_AUTH_TOKEN` - Porta in ascolto dell'applicazione - *default*: ` no_auth_token`
 
 
 

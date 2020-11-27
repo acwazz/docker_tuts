@@ -16,7 +16,6 @@ Questa è la documentazione dell'Ω frontend
 ### Env Vars :blue_book:
 
 - `REACT_APP_API_ROOT` - Host in ascolto dell'applicazione - *default*: ` `
-
 - `REACT_APP_DEFAULT_AUTH_TOKEN` - Porta in ascolto dell'applicazione - *default*: ` no_auth_token`
 - `REACT_APP_SECRET_MSG` - Messaggio segreto da consegnare a Indiana Jones :cowboy_hat_face: - *default*: `nope_no_msg`
 
