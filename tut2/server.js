@@ -24,7 +24,7 @@ testRoutes.get("/api/echo", (request, response) => {
  * Ritorna il payload in body della POST
  */
 testRoutes.post("/api/parrot", (request, response) => {
-    return response.status(200).json({error: false, message: "🦜", data:{...request.body}})
+    return response.status(200).json({error: false, message: "Ciao sono un Pappagallo 🦜", data:{...request.body}})
 })
 /**
  * Ritorna la variabile d'ambiente SECRET_MSG
