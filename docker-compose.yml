@@ -1,0 +1,52 @@
+version: '3' # opzionale
+
+services:
+  backend:
+    container_name: omega_backend # opzionale
+    build: ./tut2 # image: omega-be:69
+    command: node server.js
+    environment:
+      - BE_HOST=0.0.0.0
+      - BE_PORT=7000
+      - SECRET_MSG=ciao
+      - DEFAULT_AUTH_TOKEN=e87fca7ba041efcfc340e3de9820339af69d994c5d7f8ff130abbe757782bfd9
+      - MYSQL_HOST=database
+      - MYSQL_PORT=3306
+      - MYSQL_USER=omega
+      - MYSQL_PASSWORD=password
+    restart: always
+    expose:
+      - 7000
+    depends_on:
+      - database
+
+  database:
+    container_name: omega_database
+    image: mysql:5
+    volumes:
+      - omega_backend_db_files:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=omega_prod
+      - MYSQL_USER=omega
+      - MYSQL_PASSWORD=password
+
+  frontend:
+    container_name: omega_frontend
+    build: 
+      context: ./tut3
+      dockerfile: Dockerfile_alternate
+    environment:
+      - REACT_APP_API_ROOT=http://backend:7000/api/
+      - REACT_APP_DEFAULT_AUTH_TOKEN=e87fca7ba041efcfc340e3de9820339af69d994c5d7f8ff130abbe757782bfd9
+      - REACT_APP_SECRET_MSG=ciao
+    restart: always
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    depends_on:
+      - backend
+
+volumes:
+  omega_backend_db_files:

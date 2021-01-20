@@ -1,0 +1,12 @@
+FROM node:lts
+
+RUN mkdir /frontend
+WORKDIR /frontend
+
+COPY ./package.json /frontend/package.json
+RUN npm i
+RUN npm i -g serve
+
+COPY . /frontend/
+
+ENTRYPOINT [ "/frontend/entrypoint.sh" ]
