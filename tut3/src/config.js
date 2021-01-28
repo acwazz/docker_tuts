@@ -1,4 +1,4 @@
-const API_ROOT = process.env.REACT_APP_API_ROOT || ""
+const API_ROOT = `http://${process.env.REACT_APP_BE_HOST}:${process.env.REACT_APP_BE_PORT}/api/`  || ""
 const DEFAULT_AUTH_TOKEN = process.env.REACT_APP_DEFAULT_AUTH_TOKEN || "no_auth_token"
 const SECRET_MSG = process.env.REACT_APP_SECRET_MSG || "nope_no_msg"
 
